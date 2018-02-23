@@ -21,10 +21,10 @@
 }
 - (IBAction)changeImageAlignment:(id)sender {
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 150, 80)];
-    [button setImage:[UIImage imageNamed:@"clock"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"information"] forState:UIControlStateNormal];
     [button setTitle:@"我在下面" forState:UIControlStateNormal];
     button.backgroundColor = [UIColor greenColor];
-    [button changeButtonImageAlignment:SYImageAlignmentTop withSpace:10.0];// 设置好图片和文字之后调用该方法
+    [button changeButtonImageAlignment:SYImageAlignmentBottom withSpace:10.0];// 设置好图片和文字之后调用该方法
     [self.view addSubview:button];
 }
 

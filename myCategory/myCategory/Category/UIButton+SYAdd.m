@@ -83,7 +83,7 @@
         titleSize.width = frameSize.width;
     }
     CGFloat totalHeight = (imageSize.height + titleSize.height + space);
-    self.titleEdgeInsets = UIEdgeInsetsMake(- (totalHeight - imageSize.height), imageSize.width * -0.5, 0.0, imageSize.width * 0.5);
-    self.imageEdgeInsets = UIEdgeInsetsMake(0, titleSize.width * 0.5, - (totalHeight - titleSize.height), titleSize.width * -0.5);
+    self.titleEdgeInsets = UIEdgeInsetsMake(- (totalHeight - titleSize.height), imageSize.width * -0.5, 0.0, imageSize.width * 0.5);
+    self.imageEdgeInsets = UIEdgeInsetsMake(0, titleSize.width * 0.5, - (totalHeight - imageSize.height), titleSize.width * -0.5);
 }
 @end
