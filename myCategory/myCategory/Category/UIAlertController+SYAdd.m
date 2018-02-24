@@ -15,9 +15,15 @@
                           preferredStyle:(UIAlertControllerStyle)preferredStyle
                               sureHandle:(void(^)(UIAlertAction *action))sureHandle
 {
-    return [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert sureTitle:@"确定" sureActionStyle:UIAlertActionStyleDefault sureHandle:^(UIAlertAction *action) {
-        
-    } cancelTitle:@"取消" cancelActionStyle:UIAlertActionStyleDestructive cancelHandle:nil];
+    return [UIAlertController alertControllerWithTitle:title
+                                               message:message
+                                        preferredStyle:UIAlertControllerStyleAlert
+                                             sureTitle:@"确定"
+                                       sureActionStyle:UIAlertActionStyleDefault
+                                            sureHandle:sureHandle
+                                           cancelTitle:@"取消"
+                                     cancelActionStyle:UIAlertActionStyleDestructive
+                                          cancelHandle:nil];
 }
 /// 只有确定按钮
 + (instancetype)alertControllerWithTitle:(NSString *)title
@@ -25,9 +31,15 @@
                           preferredStyle:(UIAlertControllerStyle)preferredStyle
                           onlySureHandle:(void(^)(UIAlertAction *action))sureHandle
 {
-    return [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert sureTitle:@"确定" sureActionStyle:UIAlertActionStyleDefault sureHandle:^(UIAlertAction *action) {
-        
-    } cancelTitle:nil cancelActionStyle:UIAlertActionStyleDestructive cancelHandle:nil];
+    return [UIAlertController alertControllerWithTitle:title
+                                               message:message
+                                        preferredStyle:UIAlertControllerStyleAlert
+                                             sureTitle:@"确定"
+                                       sureActionStyle:UIAlertActionStyleDefault
+                                            sureHandle:sureHandle
+                                           cancelTitle:nil
+                                     cancelActionStyle:UIAlertActionStyleDestructive
+                                          cancelHandle:nil];
 }
 /**
  自定义确定和取消
@@ -53,13 +65,19 @@
                        cancelActionStyle:(UIAlertActionStyle)cancelActionStyle
                             cancelHandle:(void(^)(UIAlertAction *action))cancelHandle
 {
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:preferredStyle];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title
+                                                                     message:message
+                                                              preferredStyle:preferredStyle];
     if (cancelTitle) {
-        UIAlertAction *acticonCancel = [UIAlertAction actionWithTitle:cancelTitle style:cancelActionStyle handler:cancelHandle];
+        UIAlertAction *acticonCancel = [UIAlertAction actionWithTitle:cancelTitle
+                                                                style:cancelActionStyle
+                                                              handler:cancelHandle];
         [alertVC addAction:acticonCancel];
     }
     if (sureTitle) {
-        UIAlertAction *acticonSure = [UIAlertAction actionWithTitle:sureTitle style:sureActionStyle handler:sureHandle];
+        UIAlertAction *acticonSure = [UIAlertAction actionWithTitle:sureTitle
+                                                              style:sureActionStyle
+                                                            handler:sureHandle];
         [alertVC addAction:acticonSure];
     }
     return alertVC;
