@@ -24,7 +24,7 @@
     [button setImage:[UIImage imageNamed:@"clock"] forState:UIControlStateNormal];
     [button setTitle:@"我在下面" forState:UIControlStateNormal];
     button.backgroundColor = [UIColor greenColor];
-    [button changeButtonImageAlignment:SYImageAlignmentBottom withSpace:10.0];// 设置好图片和文字之后调用该方法
+    [button changeButtonImageAlignment:SYImageAlignmentTop withSpace:10.0];// 设置好图片和文字之后调用该方法
     [self.view addSubview:button];
 }
 

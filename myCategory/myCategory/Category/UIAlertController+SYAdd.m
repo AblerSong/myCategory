@@ -17,7 +17,7 @@
 {
     return [UIAlertController alertControllerWithTitle:title
                                                message:message
-                                        preferredStyle:UIAlertControllerStyleAlert
+                                        preferredStyle:preferredStyle
                                              sureTitle:@"确定"
                                        sureActionStyle:UIAlertActionStyleDefault
                                             sureHandle:sureHandle
@@ -33,7 +33,7 @@
 {
     return [UIAlertController alertControllerWithTitle:title
                                                message:message
-                                        preferredStyle:UIAlertControllerStyleAlert
+                                        preferredStyle:preferredStyle
                                              sureTitle:@"确定"
                                        sureActionStyle:UIAlertActionStyleDefault
                                             sureHandle:sureHandle
